@@ -4,14 +4,11 @@ version: "1.0"
 permalink: /:year/:month/:day/:title/
 
 # 站点设置
-title: ""
+title: "Devil"
 email: 
 description: ""
 keywords: ""
 
-# 用户信息设置
-weibo_username: 
-github_username: 
 
 # Markdown设置
 kramdown:
