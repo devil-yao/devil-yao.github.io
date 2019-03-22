@@ -3,19 +3,24 @@
     <div class="panel-body">
         <!-- 多说评论框 start -->
         <div class="ds-thread" data-thread-key="{{ page.id }}" data-title="{{page.title}}" data-url="{{page.url | prepend: site.url}}"></div>
-        <!-- 多说评论框 end -->
-        <!-- 多说公共JS代码 start (一个网页只需插入一次) -->
-        <script type="text/javascript">
-            var duoshuoQuery = {short_name:"{{site.duoshuo_shortname}}"};
-            (function() {
-                var ds = document.createElement('script');
-                ds.type = 'text/javascript';ds.async = true;
-                ds.src = (document.location.protocol == 'https:' ? 'https:' : 'http:') + '//static.duoshuo.com/embed.js';
-                ds.charset = 'UTF-8';
-                (document.getElementsByTagName('head')[0]
-                || document.getElementsByTagName('body')[0]).appendChild(ds);
-            })();
-        </script>
-        <!-- 多说公共JS代码 end -->
+       
+       <script src="http://cdn1.lncld.net/static/js/3.0.4/av-min.js"></script>
+    <script src='http://unpkg.com/valine/dist/Valine.min.js'></script>
+        <div id="vcomments"></div>
+
+        <script>
+        
+       
+
+		new Valine({
+    		el: '#vcomments',
+  			appId: 'cIWXGkDNpupdc2BaK9UoOV0v-gzGzoHsz',
+            appKey: 'Y9siicQpf4oTY0BjR2BQjC6t',
+		    notify:false, 
+		    verify:false, 
+		    avatar:'mm', 
+		    placeholder: 'comment' 
+});
+    </script>
     </div>
 </div>
